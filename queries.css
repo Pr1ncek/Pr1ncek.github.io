@@ -1,0 +1,125 @@
+@media only screen and (max-width: 1200px) {
+
+
+}
+
+
+/* Small tablet to big tablet: from 768px to 1023px */
+
+@media only screen and (max-width: 1023px) {
+
+    .about-me p {
+        padding-top: 4rem;
+        font-size: 1.7rem;
+
+    }
+    .about-me img {
+        margin: 0 22rem;
+        margin-bottom: 3rem;
+    }
+
+    .about-me .btn {
+        margin-left: 40%;
+
+    }
+    .projects-section .card{
+
+        width: 50%;
+        margin: 0 5%;
+        margin-bottom: 10%;
+        margin-left: 25%;
+
+    }
+    .projects-section {
+        margin-bottom: 10rem;
+    }
+
+    .last-card{
+        margin-right: 0;
+      }
+
+}
+
+
+/* Small phones to small tablets: from 481px to 767px */
+
+@media only screen and (max-width: 767px) {
+
+    .about-me img {
+        width: 50%;
+        margin: 2rem 12rem;
+    }
+
+    .about-me p {
+        
+        font-size: 1.5rem;
+        float: none !important;
+
+    }
+   
+    .about-me .btn {
+        margin-left: 30%;
+
+    }
+
+    .projects-section .card{
+
+        width: 90%;
+        margin: 0 0;
+        margin-bottom: 10%;
+        margin-left: 5%;
+
+    }
+    .projects-section {
+        margin-bottom: 10rem;
+    }
+
+    .last-card{
+        margin-right: 0;
+      }
+
+
+}
+
+
+
+/* Small phones: from 0 to 480px */
+
+@media only screen and (max-width: 480px) {
+
+    .heading-primary--main {
+
+            font-size: 3rem;
+
+    }
+
+    .heading-primary--sub {
+
+        font-size: 1.5rem;
+        letter-spacing: .5rem;
+    }
+
+
+    .about-me img {
+        width: 70%;
+        margin: 0 15%;
+        margin-bottom: 3rem;
+
+
+    }
+
+    .about-me p {
+        
+        font-size: 1.5rem;
+        line-height: 3.5rem;
+        
+
+    }
+   
+    .about-me .btn {
+        margin-left: 30%;
+
+    }
+
+
+}

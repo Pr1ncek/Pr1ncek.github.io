@@ -10,7 +10,7 @@ body {
   font-weight: 400;
   line-height: 1.7;
   color: #777;
-  padding: 0 2rem;
+  
   text-rendering: optimizeLegibility;
 }
 
@@ -47,20 +47,16 @@ section {
   font-size: 2rem;
 }
 
-#nav-bar-brand{
-  letter-spacing: .5rem;
+#nav-bar-brand {
+  letter-spacing: 0.5rem;
   text-decoration: none;
 }
- 
-#navbar h2::after {
 
+#navbar h2::after {
   margin-top: 5px;
   width: 150px;
   margin-left: 0;
-
 }
-
-
 
 .header__text-box {
   position: absolute;
@@ -76,12 +72,15 @@ section {
   /*    TO PREVENT THE SHAKINESS WHICH IS SOMETIMES CAUSED BY ANIMATIONS  */
   backface-visibility: hidden;
   margin-bottom: 1rem;
+  width: 100%;
 }
 .heading-primary--main {
   display: block;
-  font-size: 5.2rem;
-  font-weight: 700;
+  font-size: 5rem;
+  font-weight: 400;
   letter-spacing: 1rem;
+  border: 2.5px solid  #007bff;
+  padding: 15px 25px;
   /*    THESE TWO PROPERTIES ARE DEFINED TO USE ANIMATIONS    */
   animation-name: moveInLeft;
   animation-duration: 3s;
@@ -96,7 +95,7 @@ section {
   animation: moveInRight 3s ease-out;
   /*    animation-delay: 3s;*/
   /*    animation-iteration-count: 3;*/
-  margin-bottom: 4.5rem;
+  margin-bottom: 4rem;
 }
 
 .btn:link,
@@ -109,6 +108,7 @@ section {
   transition: all 0.2s;
   position: relative;
   font-size: 1.6rem;
+  letter-spacing: 1.5px;
   color: #777;
 }
 
@@ -131,7 +131,7 @@ section {
   color: #777;
 }
 .btn--white::after {
-  background-color:  rgba(255, 255, 255, 0.904);
+  background-color: rgba(255, 255, 255, 0.904);
 }
 
 .btn::after {
@@ -189,40 +189,34 @@ section {
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(3rem); }
+    transform: translateY(3rem);
+  }
   100% {
     transform: translate(0);
-    opacity: 1; } }
-
+    opacity: 1;
+  }
+}
 
 .about-me {
-
-
 }
 
 .about-me p {
-
-  font-size: 2rem;
+  font-size: 1.9rem;
   padding-top: 10rem;
   padding-bottom: 2rem;
   letter-spacing: 145%;
   line-height: 4rem;
-  word-spacing: .3rem;
-
+  word-spacing: 0.3rem;
 }
-
-
 
 .about-me img {
-
- width: 35%;
- margin-right: 5rem;
-
+  width: 35%;
+  margin-right: 5rem;
 }
 
-h2 {  
+h2 {
   margin-bottom: 10rem;
-
+  text-transform: uppercase;
 }
 h2:after {
   /*  MUST SPECIFY CONTENT WHEN USING AFTER PSUEDOCLASS   */
@@ -233,13 +227,15 @@ h2:after {
   width: 200px;
   margin: 0 auto;
   margin-top: 30px;
-
 }
 
+.about-me .btn {
+  color: #007bff;
+  padding: 1rem 5rem;
+}
 
 .about-me .btn:hover {
   color: #fff;
-
 }
 
 .technologies {
@@ -254,36 +250,135 @@ background-attachment: fixed;
 background-size: cover;
 background-position: center;
 clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%); */
-
- 
-
+  margin: 0 2rem;
 }
 
-#tech-heading{
-
-margin-top: 10rem;
-margin-bottom: 0;
-
+#tech-heading {
+  margin-top: 10rem;
+  margin-bottom: 0;
 }
 
 .technologies {
-
   padding: 5rem 0;
-
 }
 
 .technologies h3 {
-
   font-size: 3rem;
-
 }
 
 .technologies h5 {
-
   font-size: 2rem;
+}
+
+.technologies .card {
+  border-radius: 1rem;
+}
+
+#backend-card {
+  margin-top: 7rem;
+}
+
+#frontend-card {
+  margin-top: 4rem;
+}
+
+.code-img-section {
+  height: 50vh;
+  width: 100%;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url(images/backgroundimg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  clip-path: polygon(0 15%, 100% 0, 100% 75%, 0 100%);
+  margin: 5rem 0;
+}
+.projects-section {
+
+  padding-top: 0;
+  padding: 0 2rem;
+}
+.projects-section .card{
+
+  width: 25%;
+  float: left;
+  margin: 0 4%;
+  margin-bottom: 10%;
+  box-shadow: 3px 3px 20px rgb(117, 117, 117);
+}
+.last-card{
+  margin-right: 0;
+}
+.projects-section .card-title{
+
+  font-size: 4rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.projects-section .card-text{
+
+  font-size: 1.7rem;
+  font-weight: 400;
 
 }
 
+.projects-section li{
 
+  font-size: 1.7rem;
+}
 
+.projects-section a{
 
+  font-size: 1.7rem;
+}
+
+.contact-section {
+  padding: 0 2rem;
+  width: 100%;
+  font-size: 2rem;
+  margin-bottom: 15rem;
+}
+.contact-div h2 {
+  margin-bottom: 10rem;
+  padding: 0;
+}
+.contact-section input {
+  font-size: 2rem;
+}
+
+.contact-section .form-group{
+  margin-bottom: 3rem;
+}
+
+.contact-section textarea{
+  font-size: 2rem;
+}
+
+.contact-section button {
+  padding: 1rem 2.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+footer {
+
+}
+
+footer {
+    
+  width: 100%;
+  height: 125px;
+  background-color: rgb(44, 44, 44);
+  color: rgb(212, 212, 212);
+  
+}
+
+footer h3 {
+text-align: center;
+font-size: 1.5rem;
+padding-top: 5.5%;
+}

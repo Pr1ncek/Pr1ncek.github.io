@@ -11,13 +11,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="queries.css">
 
     <title>Portfolio</title>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-light sticky-top bg-light py-4" id="navbar">
+    <nav class="navbar navbar-light sticky-top bg-light py-3" id="navbar">
         <h2 class="h2" id="nav-bar-brand" href="#">PORTFOLIO</h2>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -27,15 +28,15 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">About Me
+                    <a class="nav-link" href="#about-section">About Me
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">My Projects</a>
+                    <a class="nav-link" href="#projects-section">My Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="#contact-section">Contact</a>
                 </li>
 
             </ul>
@@ -47,29 +48,31 @@
 
         <div class="header__text-box">
             <h1 class="heading-primary">
-                <span class="heading-primary--main">Prince Chaudhary</span>
+                <span class="heading-primary--main"> Prince Chaudhary </span>
                 <span class="heading-primary--sub">Full Stack Developer</span>
             </h1>
 
-            <a href="https://github.com/Pr1ncek" target="blank" class="btn btn--white btn--animated">View Github</a>
+            <a href="https://github.com/Pr1ncek" target="blank" class="btn btn--white btn--animated text-primary">View Github</a>
         </div>
     </header>
 
-    <section class="about-me clearfix">
+    <section class="about-me clearfix" id="about-section">
 
         <div class="container">
 
-            <h2 class="display-2 text-center">About Me</h2>
+            <h2 class="display-3 text-center">About Me</h2>
 
             <div>
-                <img class="img-fluid rounded img-thumbnail float-left" src="images/about-me.png" alt="Profile-picture">
+                <img class="rounded img-thumbnail float-left" src="images/about-me.png" alt="Profile-picture">
 
 
                 <p>Hi, My name is Prince Chaudhary. I am currently studying for a Bachelor's in Computer Science at San Jose
-                    State University. I am passionate about computer programming and web development. My goal is to become
-                    a full stack developer.</p>
+                    State University. I am passionate about computer programming and web development. My dream is to become
+                    a full stack developer. I am currently experinced with making websites using HTML, CSS, Sass, Bootstrap,
+                    and JavaScript. My next step is to learn a front-end framework either React or Angular (maybe both).
+                    Finally, I want to focus on the back-end with Node.js and MongoDB. </p>
 
-                <a href="#" class="btn btn-resume btn-outline-primary btn--animated">Resume</a>
+                <a href="resources/Chaudhary, Prince Resume 2018.pdf" target="blank" class="btn btn-resume btn-outline-primary btn--animated">Resume</a>
 
             </div>
 
@@ -87,55 +90,62 @@
 
 
     <div>
-        <h2 class="display-2 text-center" id="tech-heading">Technologies</h2>
+        <h2 class="display-3 text-center" id="tech-heading">Technologies</h2>
         <section class="technologies">
 
-            <div class="card">
-                <h3 class="card-header">Front End</h3>
-                <div class="card-body px-5 py-4">
+            <div class="card" id="frontend-card">
+                <h3 class="card-header text-center bg-dark text-light">Front End</h3>
+                <div class="card-body px-5 py-5">
                     <h5 class="card-title">HTML</h5>
                     <div class="progress" style="height: 20px;">
-                            <div class="progress-bar text-uppercase" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Intermediate</div>
-                          </div>
+                        <div class="progress-bar text-uppercase" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Intermediate</div>
+                    </div>
                 </div>
-                <div class="card-body px-5 py-4">
+                <div class="card-body px-5 py-5">
                     <h5 class="card-title">CSS | Sass | Bootstrap</h5>
                     <div class="progress" style="height: 20px;">
-                            <div class="progress-bar text-uppercase" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Intermediate</div>
-                          </div>
-                    
+                        <div class="progress-bar text-uppercase" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Intermediate</div>
+                    </div>
+
                 </div>
-                <div class="card-body px-5 py-4">
+                <div class="card-body px-5 py-5">
                     <h5 class="card-title">JavaScript</h5>
                     <div class="progress" style="height: 20px;">
-                            <div class="progress-bar text-uppercase" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Intermediate</div>
-                          </div>
-                    
+                        <div class="progress-bar text-uppercase" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Intermediate</div>
+                    </div>
+
+                </div>
+                <div class="card-body px-5 py-5">
+                    <h5 class="card-title">React w/ Redux</h5>
+                    <div class="progress" style="height: 20px;">
+                        <div class="progress-bar text-uppercase" role="progressbar" style="width: 10%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
                 </div>
             </div>
-            <div class="card mt-5">
-                    <h3 class="card-header text-center">Back End</h3>
-                    <div class="card-body px-5 py-4">
-                        <h5 class="card-title">HTML</h5>
-                        <div class="progress" style="height: 20px;">
-                                <div class="progress-bar text-uppercase" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Intermediate</div>
-                              </div>
-                    </div>
-                    <div class="card-body px-5 py-4">
-                        <h5 class="card-title">CSS | Sass | Bootstrap</h5>
-                        <div class="progress" style="height: 20px;">
-                                <div class="progress-bar text-uppercase" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Intermediate</div>
-                              </div>
-                        
-                    </div>
-                    <div class="card-body px-5 py-4">
-                        <h5 class="card-title">JavaScript</h5>
-                        <div class="progress" style="height: 20px;">
-                                <div class="progress-bar text-uppercase" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Intermediate</div>
-                              </div>
-                        
+            <div class="card" id="backend-card">
+                <h3 class="card-header text-center  bg-dark text-light">Back End</h3>
+                <div class="card-body px-5 py-5">
+                    <h5 class="card-title">Java</h5>
+                    <div class="progress" style="height: 20px;">
+                        <div class="progress-bar text-uppercase" role="progressbar" style="width: 65%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Intermediate</div>
                     </div>
                 </div>
+                <div class="card-body px-5 py-5">
+                    <h5 class="card-title">Node.js | Express</h5>
+                    <div class="progress" style="height: 20px;">
+                        <div class="progress-bar text-uppercase" role="progressbar" style="width: 10%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                </div>
+                <div class="card-body px-5 py-5">
+                    <h5 class="card-title">Mongo DB</h5>
+                    <div class="progress" style="height: 20px;">
+                        <div class="progress-bar text-uppercase" role="progressbar" style="width: 10%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                </div>
+            </div>
 
 
 
@@ -146,7 +156,106 @@
 
 
 
-    <section></section>
+    <section class="code-img-section">
+
+    </section>
+    </div>
+
+
+    <div id="projects-section">
+        <h2 class="display-3 text-center">Projects</h2>
+        <section class="projects-section clearfix">
+            <div class="card">
+                <img class="card-img-top" src="images/project1.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Natours </h5>
+                    <p class="card-text">Website for a company which provides outdoor tours in nature</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">HTML & CSS Sass</li>
+                    <li class="list-group-item"> Responsive Design</li>
+                </ul>
+                <div class="card-body text-center">
+                    <a href="https://github.com/Pr1ncek/Natours-Website" target="blank" class="card-link">View Code</a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="images/project2.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Omnifood </h5>
+                    <p class="card-text">Website for a company which provides delivery services for healthy food</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">HTML & CSS</li>
+
+                    <li class="list-group-item"> Responsive Design</li>
+                </ul>
+                <div class="card-body text-center">
+                    <a href="https://github.com/Pr1ncek/Omnifood-Website"  target="blank" class="card-link">View Code</a>
+                </div>
+            </div>
+            <div class="card last-card">
+                <img class="card-img-top" src="images/project3.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Budget Calculator </h5>
+                    <p class="card-text">Simple budget calculator for managing incomes and expenses</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">HTML & CSS</li>
+                    <li class="list-group-item">JavaScript</li>
+                </ul>
+                <div class="card-body text-center">
+                    <a href="https://github.com/Pr1ncek/Budget-Calculator"  target="blank" class="card-link">View Code</a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="images/project4.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Image Gallery</h5>
+                    <p class="card-text">Image Gallery for viewing beautiful images</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">HTML & CSS</li>
+                    <li class="list-group-item">Bootstrap</li>
+                </ul>
+                <div class="card-body text-center">
+                    <a href="https://github.com/Pr1ncek/Image-Gallery-Website"  target="blank" class="card-link">View Code</a>
+                </div>
+            </div>
+
+
+        </section>
+
+    </div>
+
+    <div class="contact-div" id="contact-section">
+        <h2 class="display-3 text-center">Contact me</h2>
+        <section class="contact-section container">
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter Name">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1"> Message</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                </div>
+                <button type="submit" class="btn btn-block btn-primary">Submit</button>
+            </form>
+
+
+
+        </section>
+    </div>
+    <footer>
+
+        <h3>Designed and coded by Prince Chaudhary</h3>
+
+    </footer>
 
 
 
