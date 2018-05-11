@@ -76,7 +76,7 @@ section {
 }
 .heading-primary--main {
   display: block;
-  font-size: 5rem;
+  font-size: 4.3rem;
   font-weight: 400;
   letter-spacing: 1rem;
   border: 2.5px solid  #007bff;
@@ -250,7 +250,7 @@ background-attachment: fixed;
 background-size: cover;
 background-position: center;
 clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%); */
-  margin: 0 2rem;
+  margin: 0 8rem;
 }
 
 #tech-heading {
@@ -301,6 +301,8 @@ clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%); */
 
   padding-top: 0;
   padding: 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 .projects-section .card{
 
@@ -315,7 +317,7 @@ clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%); */
 }
 .projects-section .card-title{
 
-  font-size: 4rem;
+  font-size: 3.7rem;
   font-weight: 300;
   text-align: center;
 }
@@ -324,7 +326,7 @@ clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%); */
 
   font-size: 1.7rem;
   font-weight: 400;
-
+  text-align: center;
 }
 
 .projects-section li{
