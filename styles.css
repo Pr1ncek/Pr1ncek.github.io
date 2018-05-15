@@ -14,6 +14,64 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+#navbar-button {
+  font-size:30px;
+  cursor:pointer;
+  color: #fff;
+  float: right;
+  margin-right: 3%;
+  padding-top: 2%;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+.overlay a {font-size: 20px}
+.overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+}
+}
 section {
   padding: 80px 0;
 }
@@ -28,7 +86,7 @@ section {
 }
 
 .header {
-  height: 95vh;
+  height: 100vh;
   background-image: linear-gradient(
       to right bottom,
       rgba(0, 0, 0, 0.6),
@@ -38,29 +96,14 @@ section {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%);
   position: relative;
   margin-top: 0;
 }
 
-#navbar {
-  font-size: 2rem;
-}
-
-#nav-bar-brand {
-  letter-spacing: 0.5rem;
-  text-decoration: none;
-}
-
-#navbar h2::after {
-  margin-top: 5px;
-  width: 150px;
-  margin-left: 0;
-}
-
 .header__text-box {
   position: absolute;
-  top: 40%;
+  top: 48%;
   left: 50%;
   /* (x, y) */
   transform: translate(-50%, -50%);
@@ -384,3 +427,4 @@ text-align: center;
 font-size: 1.5rem;
 padding-top: 5.5%;
 }
+
