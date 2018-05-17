@@ -1,5 +1,28 @@
 @media only screen and (max-width: 1200px) {
+    .about-me p {
+        padding-top: 4rem;
+        font-size: 1.7rem;
+    }
 
+    .projects-section .card{
+
+        width: 30%;
+        margin: 0 10%;
+        margin-bottom: 10%;
+        margin-left: 10%;
+
+    }
+    .projects-section {
+        margin-bottom: 10rem;
+    }
+
+    .last-card{
+        margin-right: 0;
+      }
+
+      .technologies {
+          margin: 0;
+      }
 
 }
 
@@ -11,7 +34,6 @@
     .about-me p {
         padding-top: 4rem;
         font-size: 1.7rem;
-
     }
     .about-me img {
         margin: 0 22rem;
@@ -125,5 +147,13 @@
 
     }
 
-
+    #udemy-card {
+       float: none;
+       width: 100%;
+       margin-bottom: 7rem;
+      }
+      
+      #sjsu-card {
+        width: 100%;
+      }
 }

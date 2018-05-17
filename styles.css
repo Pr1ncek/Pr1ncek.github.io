@@ -18,9 +18,18 @@ body {
   font-size:40px;
   cursor:pointer;
   color: #fff;
-  float: right;
   margin-right: 3%;
   padding-top: 2%;
+
+  position: fixed;
+  top: 0;
+  left: 92%;
+  z-index: -1;
+  width: 100%;
+}
+
+.color-change {
+  color: #007bff !important;
 }
 
 #navbar-button:hover {
@@ -248,6 +257,7 @@ section {
 }
 
 .about-me {
+  margin-top: 5%;
 }
 
 .about-me p {
@@ -322,6 +332,7 @@ clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%); */
 
 .technologies .card {
   border-radius: 1rem;
+  box-shadow: 1px 1px 6px rgb(136, 136, 136);
 }
 
 #backend-card {
@@ -331,6 +342,32 @@ clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%); */
 #frontend-card {
   margin-top: 4rem;
 }
+
+#courses {
+  margin-top: 7rem;
+}
+
+#sjsu-card {
+  width: 45%;
+}
+
+#udemy-card {
+  width: 45%;
+  float: left;
+  margin-right: 10%;
+}
+
+
+.card-header {
+  background-color: rgb(243, 243, 243);
+  color: #777;
+}
+
+#technologies-section .card-title {
+  font-size: 2.5rem;
+}
+
+
 
 .code-img-section {
   height: 50vh;
@@ -345,7 +382,7 @@ clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%); */
   background-attachment: fixed;
   background-position: center;
   clip-path: polygon(0 15%, 100% 0, 100% 75%, 0 100%);
-  margin: 5rem 0;
+  margin: 10rem 0;
 }
 .projects-section {
 
@@ -353,7 +390,22 @@ clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%); */
   padding: 0 2rem;
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 3%;
 }
+.projects-section a {
+  text-decoration: none;
+  color: #777;
+}
+
+.projects-section .card-body a {
+  color: #007bff;
+  border-bottom: 1px solid #007bff00;
+  transition: border-bottom .2s;
+}
+.projects-section .card-body a:hover {
+  border-bottom: 1px solid #007bff;
+} 
+
 .projects-section .card{
 
   width: 25%;
@@ -361,6 +413,10 @@ clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%); */
   margin: 0 4%;
   margin-bottom: 10%;
   box-shadow: 3px 3px 20px rgb(117, 117, 117);
+  transition: box-shadow .1s;
+}
+.projects-section .card:hover {
+  box-shadow: 3px 3px 20px rgb(0, 0, 0);
 }
 .last-card{
   margin-right: 0;

@@ -1,0 +1,788 @@
+/************************************************************************************************************/
+
+/* First Steps to set all margins and padding to 0 and set box sizing */
+
+/*COLOR: #e67e22 */
+
+/************************************************************************************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+
+
+.row {
+    /*    All other margins and padding will be defined in percentages based on max-width   */
+    max-width: 1140px;
+    margin: 0 auto;
+
+}
+
+section {
+
+    padding: 80px 0;
+
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+* html .clearfix {
+    zoom: 1;
+}
+
+/* IE6 */
+
+*:first-child + html .clearfix {
+    zoom: 1;
+}
+
+/* IE7 */
+
+/************************************************************************************************************/
+
+/* HEADER */
+
+/************************************************************************************************************/
+
+header {
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images-background/hero.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    background-attachment: fixed;
+
+}
+
+h1 {
+    /*    Set the margin to 0 because the normalize file add margins to certain element such as h1  */
+    margin-top: 0;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 240%;
+    font-weight: 300;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    margin-bottom: 20px;
+
+}
+
+.hero-text-box {
+
+    position: absolute;
+    /*    set width to 1140 so it looks like a row */
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    /*    translates the element half of its width up and half of its width to the left*/
+    transform: translate(-50%, -50%);
+
+}
+
+.btn:link,
+.btn:visited {
+    /*    CHANGING <a> ELEMENT FROM INLINE TO INLINE-BLOCK  */
+    /*    INLINE-BLOCK ALLOWS YOU TO ADD MARGIN AND PADDING TO INLINE ELEMENTS*/
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 200px;
+
+
+    transition: background-color .2s, color .2s, border .2s;
+
+}
+
+.btn-full:link,
+.btn-full:visited {
+
+    color: #fff;
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+
+    color: #e67e22;
+    border: 1px solid #e67e22;
+
+}
+
+.btn:hover,
+.btn:active {
+
+    background-color: #cf6d17;
+}
+
+.btn-full:hover,
+.btn-full:active {
+
+
+    border: 1px solid #cf6d17;
+
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+
+    color: #fff;
+    border: 1px solid #cf6d17;
+
+}
+
+.logo {
+
+    float: left;
+    height: 100px;
+    width: auto;
+    margin-top: 20px;
+
+}
+
+.nav-ul {
+
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+
+
+}
+
+.nav-ul li {
+
+    /*    TO PUT THE LIST ELEMENTS INSIDE THE UL SIDE BY SIDE   */
+    display: inline-block;
+    margin-left: 40px;
+
+
+}
+
+.nav-ul li a:link,
+.nav-ul li a:visited {
+
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    padding: 10px 0;
+    /*    ADD A TRANSPARENT BORDER IN ORDER TO MAKE THE TRANSITION SEEM SMOOTHER    */
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+
+
+
+}
+
+.nav-ul li a:hover,
+.nav-ul li a:active {
+
+
+    border-bottom: 2px solid #e67e22;
+
+
+}
+
+
+/************************************************************************************************************/
+
+/* FEATURES SECTION */
+
+/************************************************************************************************************/
+
+.features-section {}
+
+.features-box p {
+
+    word-spacing: 1px;
+    line-height: 145%;
+    font-size: 90%;
+
+}
+
+.features-box {
+
+    padding: 1%;
+
+}
+
+h2 {
+
+    text-align: center;
+    font-weight: 300;
+    font-size: 180%;
+    text-transform: uppercase;
+    word-spacing: 2px;
+    margin-bottom: 30px;
+
+}
+
+h2:after {
+    /*  MUST SPECIFY CONTENT WHEN USING AFTER PSUEDOCLASS   */
+    content: " ";
+    display: block;
+    background-color: #e67e22;
+    height: 2px;
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+
+}
+
+h3 {
+
+    font-weight: 300;
+    font-size: 110%;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    margin-top: 15px;
+
+}
+
+
+.sub-heading {
+
+    word-spacing: 1px;
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 30px;
+
+}
+
+.features-section i {
+
+    display: block;
+    color: #e67e22;
+    font-size: 350%;
+    margin-left: 75px;
+
+
+}
+
+/************************************************************************************************************/
+
+/* MEALS SHOWCASE SECTION */
+
+/************************************************************************************************************/
+
+.meals-showcase-section {
+
+    padding: 0;
+}
+
+
+.meals-showcase-list {
+    width: 100%;
+    list-style: none;
+}
+
+.meals-showcase-list li {
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.meal-photo {
+
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background: #000;
+
+}
+
+.meal-photo img {
+
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity .5s;
+    opacity: 0.6;
+}
+
+.meal-photo img:hover {
+
+    transform: scale(1.03);
+    opacity: 1;
+
+}
+
+/************************************************************************************************************/
+
+/* HOW IT WORKS SECTION */
+
+/************************************************************************************************************/
+
+.how-it-works-section {
+
+    background-color: #e6e6e6;
+
+}
+
+.steps {
+
+    margin-top: 5%;
+
+}
+
+.iphone-image {
+
+    width: 60%;
+    height: auto;
+    float: right;
+    padding-right: 100px;
+
+}
+
+.how-it-works-section ul {
+
+    list-style: none;
+
+}
+
+.how-it-works-section li {
+
+    float: left;
+    text-align: center;
+    padding: 15px;
+
+}
+
+.how-it-works-section li h3 {
+
+    float: left;
+    border: 2px solid #e67e22;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    margin-right: 15px;
+}
+
+.how-it-works-section li p {
+
+    text-align: left;
+    padding: 0;
+    margin-top: 2.5%;
+
+}
+
+.how-it-works-section li:nth-of-type(3) {
+
+    padding-bottom: 40px;
+
+}
+
+.appstore-img {
+
+    height: 50px;
+    width: auto;
+
+}
+
+/************************************************************************************************************/
+
+/* CITIES SECTION */
+
+/************************************************************************************************************/
+
+.cities-section {}
+
+.cities-section figure {
+    margin: 0;
+}
+
+.cities-section figcaption {
+    padding: 15px 0;
+    font-size: 110%;
+    font-weight: 300;
+    text-transform: uppercase;
+
+}
+
+.cities-section img {
+
+    width: 250px;
+    margin: 0;
+    padding: 0;
+
+}
+
+.cities-section ul {
+
+    list-style: none;
+}
+
+.cities-section li {
+
+    padding: 5px 0;
+}
+
+.cities-section a:link,
+.cities-section a:visited {
+
+    text-decoration: none;
+    color: #e67e22;
+    border-bottom: 1px solid #e67e22;
+    transition: color .2s, border-bottom .2s;
+}
+
+.cities-section a:hover,
+.cities-section a:active {
+
+    color: #555;
+    border-bottom: 1px solid transparent;
+
+}
+
+/************************************************************************************************************/
+
+/* TESTIMONIALS SECTION */
+
+/************************************************************************************************************/
+
+.testimonial-section {
+
+    font-style: italic;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(images-background/back-customers.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;
+
+}
+
+.customer-quote {
+
+    padding: 15px;
+
+
+}
+
+.testimonial-section p {
+
+    font-size: 100%;
+    font-weight: 300;
+    line-height: 145%;
+    word-spacing: 2px;
+
+}
+
+.testimonial-section figure {
+
+    margin: 20px 0;
+
+}
+
+.testimonial-section img {
+
+    border-radius: 50%;
+    height: 50px;
+    float: left;
+    margin-right: 18px;
+
+}
+
+.testimonial-section figcaption {
+
+    padding: 10px;
+    font-size: 90%;
+
+}
+/************************************************************************************************************/
+
+/* PLAN SECTION */
+
+/************************************************************************************************************/
+
+.plan-section {
+    
+    
+  background-color: #e6e6e6;
+    
+}
+
+.plan-box {
+    
+    background-color: #f8f8f8;
+    
+    box-shadow: 3px 4px 10px 0px #1d1d1d;
+    
+    padding: 25px 10px;
+    
+    width: 30%;
+    
+    margin-right: 25px;
+    
+    
+}
+
+.price-box{
+    
+    padding: 15px 0;
+    
+    
+    
+    
+}
+.price{
+    
+    color: #e67e22;
+    
+    font-size: 300%;
+    
+    font-weight: 100;
+    
+}
+.month {
+    
+    color: #e67e22;
+     
+    
+}
+.meal-statement{
+    
+    font-size: 85%;
+    
+}
+
+.signup-btn {
+    
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #e67e22;
+    padding: 10px 45px;
+    border: 1px solid #e67e22;
+    border-radius: 200px;
+    margin-top: 25px;
+    margin-left: 25%;
+    transition: background-color .2s;
+}
+
+.signup-btn:hover {
+    
+    
+    background-color: #cf6d17;
+    
+    
+    
+}
+
+.signup-btn-clear {
+    
+    
+    background-color: #fff;
+    color: #e67e22;
+    border: 1px solid #e67e22;
+    transition: color .5s, background-color .5s;
+    
+    
+}
+.signup-btn-clear:hover {
+    
+    color: #fff;
+    
+    
+}
+
+.plan-options {
+    
+    background: #fff;
+    padding: 20px 10px;
+    font-weight: 400;
+   
+    
+}
+
+
+.plan-options ul{
+    
+    list-style: none;
+    
+    
+    
+    
+}
+
+.plan-options ul li{
+    
+    padding: 8px 10px;
+    
+    
+    
+    
+}
+
+/************************************************************************************************************/
+
+/* CONTACT FORM SECTION */
+
+/************************************************************************************************************/
+
+.contact-form-section {
+    
+   
+    
+}
+
+.contact-form{
+    
+    margin: 0 auto;
+    width: 70%;
+    
+}
+
+form{
+    
+    display: block;
+    
+}
+
+input, select, textarea{
+    
+    width: 100%;
+    padding: 10px;
+    
+}
+
+
+input[type='submit'] {
+    
+    background-color: #e67e22;
+    width: 20%;
+    margin-left: 40%;
+    border-radius: 10px;
+    padding: 10px 30px;
+    color: #fff;
+    
+    
+}
+
+
+/************************************************************************************************************/
+
+/* Footer */
+
+/************************************************************************************************************/
+
+
+footer {
+    
+    width: 100%;
+    height: 250px;
+    background-color: rgb(44, 44, 44);
+    color: #fff;
+    
+}
+
+footer nav{
+    
+    color: #fff;
+    margin-top: 50px;
+    
+}
+
+footer li{
+    
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 80%;
+}
+
+footer ul{
+    
+   list-style: none;
+    float: left;
+    display: inline-block;
+    
+}
+footer a {    
+    
+    text-decoration: none;
+    color: #fff;
+}
+
+.social-links {
+    
+    float: right;
+    margin-right: 10%;
+    margin-top: -20px;
+    font-size: 85%;
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -18,18 +18,28 @@
 
 <body>
 
+    <!-- TO DO
+        INCREASE SHADOW ON PROJECT CARDS WHEN HOVER
+        MAYBE CHANGE NAVBAR
+        ADD QUERY FOR NAVBAR BUTTON
+        ADD SECTION FOR COURSES TAKEN
+        ADD TRANSITION TIME TO NAV BAR BUTTON
+        ADJUST SPACING BETWEEN SECTIONS
+        ADD PAGES FOR EACH PROJECT
+    -->
+
     <div id="myNav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" id="close-button" onclick="closeNav()">&times;</a>
         <div class="overlay-content">
-            <a onclick="closeNav()" href="#about-section">About me</a>
-            <a onclick="closeNav()" href="#tech-heading">Skills</a>
-            <a onclick="closeNav()" href="#projects-section">Projects</a>
-            <a onclick="closeNav()" href="#contact-section">Contact me</a>
+            <a onclick="closeNav()" href="#" id="btn1">About me</a>
+            <a onclick="closeNav()" href="#tech-heading" id="btn2">Skills</a>
+            <a onclick="closeNav()" href="#projects-section" id="btn3">Projects</a>
+            <a onclick="closeNav()" href="#contact-section" id="btn4">Contact me</a>
         </div>
     </div>
 
     <header class="header">
-        <span id="navbar-button" onclick="openNav()">&#9776;</span>
+        <span class="" id="navbar-button" onclick="openNav()">&#9776;</span>
 
         <div class="header__text-box">
             <h1 class="heading-primary">
@@ -74,65 +84,105 @@
 
 
 
-    <div class="">
+    <div id="technologies-section">
         <h2 class="display-3 text-center" id="tech-heading">Technologies</h2>
         <section class="technologies">
 
             <div class="card" id="frontend-card">
-                <h3 class="card-header text-center bg-dark text-light">Front End</h3>
+                <h3 class="card-header text-center">Front End</h3>
                 <div class="card-body px-5 py-5">
                     <h5 class="card-title">HTML</h5>
-                    <div class="progress" style="height: 20px;">
+                    <div class="progress" style="height: 25px;">
                         <div class="progress-bar text-uppercase" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Intermediate</div>
                     </div>
                 </div>
                 <div class="card-body px-5 py-5">
                     <h5 class="card-title">CSS | Sass | Bootstrap</h5>
-                    <div class="progress" style="height: 20px;">
+                    <div class="progress" style="height: 25px;">
                         <div class="progress-bar text-uppercase" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Intermediate</div>
                     </div>
 
                 </div>
                 <div class="card-body px-5 py-5">
                     <h5 class="card-title">JavaScript</h5>
-                    <div class="progress" style="height: 20px;">
+                    <div class="progress" style="height: 25px;">
                         <div class="progress-bar text-uppercase" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Intermediate</div>
                     </div>
 
                 </div>
                 <div class="card-body px-5 py-5">
                     <h5 class="card-title">React w/ Redux</h5>
-                    <div class="progress" style="height: 20px;">
-                        <div class="progress-bar text-uppercase" role="progressbar" style="width: 10%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress" style="height: 25px;">
+                        <div class="progress-bar text-uppercase" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Intermediate</div>
                     </div>
 
                 </div>
+                <div class="card-body px-5 py-5">
+                        <h5 class="card-title">Angular</h5>
+                        <div class="progress" style="height: 25px;">
+                            <div class="progress-bar text-uppercase" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Intermediate</div>
+                        </div>
+    
+                    </div>
             </div>
             <div class="card" id="backend-card">
-                <h3 class="card-header text-center  bg-dark text-light">Back End</h3>
+                <h3 class="card-header text-center">Back End</h3>
                 <div class="card-body px-5 py-5">
                     <h5 class="card-title">Java</h5>
-                    <div class="progress" style="height: 20px;">
-                        <div class="progress-bar text-uppercase" role="progressbar" style="width: 65%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Intermediate</div>
+                    <div class="progress" style="height: 25px;">
+                        <div class="progress-bar text-uppercase" role="progressbar" style="width: 65%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Intermediate/ Advanced</div>
                     </div>
                 </div>
                 <div class="card-body px-5 py-5">
                     <h5 class="card-title">Node.js | Express</h5>
-                    <div class="progress" style="height: 20px;">
-                        <div class="progress-bar text-uppercase" role="progressbar" style="width: 10%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress" style="height: 25px;">
+                        <div class="progress-bar text-uppercase" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Intermediate</div>
                     </div>
 
                 </div>
                 <div class="card-body px-5 py-5">
                     <h5 class="card-title">Mongo DB</h5>
-                    <div class="progress" style="height: 20px;">
-                        <div class="progress-bar text-uppercase" role="progressbar" style="width: 10%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress" style="height: 25px;">
+                        <div class="progress-bar text-uppercase" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Intermediate</div>
                     </div>
 
                 </div>
             </div>
+            <div id="courses" class="container">
+                <div class="card clearfix" id="udemy-card">
+                    <h3 class="card-header text-center">Udemy Courses</h3>
+                    <div class="card-body px-5 pt-5">
+                        <h5 class="card-title">Web Development Bootcamp</h5>
+                    </div>
+                    <div class="card-body px-5 py-4">
+                        <h5 class="card-title">Advanced Web Development Bootcamp</h5>
+                    </div>
+                    <div class="card-body px-5 pt-4 pb-5">
+                        <h5 class="card-title">Angular 2</h5>
+                    </div>
+                </div>
+                <div class="card clearfix" id="sjsu-card">
+                    <h3 class="card-header text-center">San Jose State Courses</h3>
+                    <div class="card-body px-5 pt-5 pb-4">
+                        <h5 class="card-title">Object Oriented Design</h5>
 
+                    </div>
+                    <div class="card-body px-5 py-4">
+                        <h5 class="card-title">Data Structures and Algorithms</h5>
 
+                    </div>
+                    <div class="card-body px-5 py-4">
+                            <h5 class="card-title">Programming Paradigms</h5>
+    
+                        </div>
+                    <div class="card-body px-5 py-4 pb-5">
+                        <h5 class="card-title">Operating Systems</h5>
+
+                    </div>
+                
+                </div>
+
+            </div>
 
         </section>
 
@@ -150,94 +200,104 @@
     <div id="projects-section">
         <h2 class="display-3 text-center">Projects</h2>
         <section class="projects-section clearfix">
-            <div class="card">
-                <img class="card-img-top" src="images/project1.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Natours </h5>
-                    <p class="card-text">Website for a company which provides outdoor tours in nature</p>
+            <a href="resources/final-after-S06/index.html" target="blank">
+                <div class="card">
+                    <img class="card-img-top" src="images/project1.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Natours </h5>
+                        <p class="card-text">Website for a company which provides outdoor tours in nature</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">HTML & CSS | Sass</li>
+                        <li class="list-group-item"> Responsive Design</li>
+                    </ul>
+                    <div class="card-body text-center">
+                        <a href="https://github.com/Pr1ncek/Natours-Website" target="blank" class="card-link">View Code</a>
+                    </div>
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">HTML & CSS | Sass</li>
-                    <li class="list-group-item"> Responsive Design</li>
-                </ul>
-                <div class="card-body text-center">
-                    <a href="https://github.com/Pr1ncek/Natours-Website" target="blank" class="card-link">View Code</a>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="images/project2.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Omnifood </h5>
-                    <p class="card-text">Website for a company which provides delivery services for healthy food</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">HTML & CSS</li>
+            </a>
+            <a href="resources/Omnifood/index.html" target="blank">
+                <div class="card">
+                    <img class="card-img-top" src="images/project2.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Omnifood </h5>
+                        <p class="card-text">Website for a company which provides delivery services for healthy food</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">HTML & CSS</li>
 
-                    <li class="list-group-item"> Responsive Design</li>
-                </ul>
-                <div class="card-body text-center">
-                    <a href="https://github.com/Pr1ncek/Omnifood-Website" target="blank" class="card-link">View Code</a>
+                        <li class="list-group-item"> Responsive Design</li>
+                    </ul>
+                    <div class="card-body text-center">
+                        <a href="https://github.com/Pr1ncek/Omnifood-Website" target="blank" class="card-link">View Code</a>
+                    </div>
                 </div>
-            </div>
-            <div class="card last-card">
-                <img class="card-img-top" src="images/project3.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Budget Calculator </h5>
-                    <p class="card-text">Simple budget calculator for managing incomes and expenses</p>
+            </a>
+            <a href="resources/Budget Calculator/index.html" target="blank">
+                <div class="card last-card">
+                    <img class="card-img-top" src="images/project3.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Budget Calculator </h5>
+                        <p class="card-text">Simple budget calculator for managing incomes and expenses</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">HTML & CSS</li>
+                        <li class="list-group-item">JavaScript</li>
+                    </ul>
+                    <div class="card-body text-center">
+                        <a href="https://github.com/Pr1ncek/Budget-Calculator" target="blank" class="card-link">View Code</a>
+                    </div>
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">HTML & CSS</li>
-                    <li class="list-group-item">JavaScript</li>
-                </ul>
-                <div class="card-body text-center">
-                    <a href="https://github.com/Pr1ncek/Budget-Calculator" target="blank" class="card-link">View Code</a>
+            </a>
+            <a href="resources/Image Gallery Website/basics.html" target="blank">
+                <div class="card">
+                    <img class="card-img-top" src="images/project4.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Image Gallery</h5>
+                        <p class="card-text">Image Gallery for viewing beautiful images</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">HTML & CSS</li>
+                        <li class="list-group-item">Bootstrap</li>
+                    </ul>
+                    <div class="card-body text-center">
+                        <a href="https://github.com/Pr1ncek/Image-Gallery-Website" target="blank" class="card-link">View Code</a>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="images/project4.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Image Gallery</h5>
-                    <p class="card-text">Image Gallery for viewing beautiful images</p>
+            </a>
+            <a href="resources/Color Game Project/index.html" target="blank">
+                <div class="card">
+                    <img class="card-img-top" src="images/project5.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">RGB Quiz Game</h5>
+                        <p class="card-text">Simple game for learning RGB</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">HTML & CSS</li>
+                        <li class="list-group-item">JavaScript</li>
+                    </ul>
+                    <div class="card-body text-center">
+                        <a href="https://github.com/Pr1ncek/RGB-Game-" target="blank" class="card-link">View Code</a>
+                    </div>
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">HTML & CSS</li>
-                    <li class="list-group-item">Bootstrap</li>
-                </ul>
-                <div class="card-body text-center">
-                    <a href="https://github.com/Pr1ncek/Image-Gallery-Website" target="blank" class="card-link">View Code</a>
+            </a>
+            <a href="resources/Sound-Game/index.html" target="blank">
+                <div class="card">
+                    <img class="card-img-top" src="images/project6.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Patatap</h5>
+                        <p class="card-text">Music game with animations</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">HTML & CSS</li>
+                        <li class="list-group-item">JavaScript</li>
+                        <li class="list-group-item">Paper.js | Howler.js</li>
+                    </ul>
+                    <div class="card-body text-center">
+                        <a href="https://github.com/Pr1ncek/Sound-Game" target="blank" class="card-link">View Code</a>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="images/project5.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">RGB Quiz Game</h5>
-                    <p class="card-text">Simple game for learning RGB</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">HTML & CSS</li>
-                    <li class="list-group-item">JavaScript</li>
-                </ul>
-                <div class="card-body text-center">
-                    <a href="https://github.com/Pr1ncek/RGB-Game-" target="blank" class="card-link">View Code</a>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="images/project6.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Patatap</h5>
-                    <p class="card-text">Music game with animations</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">HTML & CSS</li>
-                    <li class="list-group-item">JavaScript</li>
-                    <li class="list-group-item">Paper.js | Howler.js</li>
-                </ul>
-                <div class="card-body text-center">
-                    <a href="https://github.com/Pr1ncek/Sound-Game" target="blank" class="card-link">View Code</a>
-                </div>
-            </div>
-
-
+            </a>
 
         </section>
 
@@ -285,7 +345,7 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
