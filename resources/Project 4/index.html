@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sounds</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/paper-full.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.10/howler.js"></script>
+    <script type="text/paperscript" canvas="myCanvas">
+
+        var colors = [];
+        var alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+
+        //console.log(alphabet);
+
+        for(var i = 0; i < 30; i++){
+
+            var r = Math.floor(Math.random() * 256);
+            var g = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+
+            colors[i] = "rgb(" + r + ", " + g + ", " + b + ")";
+            
+            //console.log(colors[i]);
+        }
+        
+
+        var keyData = {};
+
+        for(var i = 0; i < 26; i++){
+
+            keyData[alphabet[i]] = {
+                color: colors[i],
+                sound: new Howl({
+                    src: ['Resources/sounds/' + (i + 1) + '.mp3']
+                  })
+            };
+
+            //console.log(keyData[alphabet[i]]);
+        }
+
+        
+
+        var maxPoint = new Point(view.size.width - 200, view.size.height - 200);
+        var shapes = [];
+
+        function onKeyDown(event) {
+            //console.log(event);
+            if(keyData[event.key]){
+            var randomPoint = Point.random();
+            var point = maxPoint * randomPoint;
+
+            // When a key is pressed, set the content of the text item:
+
+            var myShape;
+            
+            if(event.key.charCodeAt(0) % 2 === 0){
+                myShape = new Path.Rectangle({
+                    point: [point.x - 500, point.y - 500],
+                    size: [975, 975],
+                    strokeColor: 'white'
+                });
+            } else { 
+                myShape = new Path.Circle(point, 540);
+                
+        }
+            myShape.fillColor = keyData[event.key].color;
+
+            shapes.push(myShape);
+            
+            keyData[event.key].sound.play();
+            }
+        }
+        
+        function onFrame(event) {
+            
+            for(var i = 0; i < shapes.length; i++){
+                shapes[i].fillColor.hue += 1;
+                shapes[i].scale(0.9);
+                shapes[i].rotate(5);
+                if(shapes[i].area < 1){
+                    shapes[i].remove(); // remove the circle from the canvas
+                    shapes.splice(i, 1); // remove the circle from the array
+                    i--; // decrement i so that the loop doesn't skip a circle because of .splice()
+                  }
+            }
+        }
+        
+
+        
+
+
+
+
+</script>
+</head>
+
+<body>
+    <canvas id="myCanvas" resize></canvas>
+</body>
+
+</html>
